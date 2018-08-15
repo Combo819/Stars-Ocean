@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>星海</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            position: relative;
+            overflow: hidden;
+        }
+
+        span {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            animation: flash 1s alternate infinite;
+            /* border: 1px solid white; */
+        }
+
+        @keyframes flash {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        <img src="images/1.png" />
+    </span>
+
+    <script>
+        window.onload = function () {
+            //屏幕宽高
+            var screenW = document.documentElement.clientWidth;
+            var screenH = document.documentElement.clientHeight;
+            var body = document.getElementsByTagName('body')[0];
+
+
+
+            for (var i = 0; i < 150; i++) {
+                var span = document.createElement('span');
+                span.innerHTML = '<img src="images/1.png" />';
+                body.appendChild(span);
+
+                var x = parseInt(Math.random()*screenW);
+                var y = parseInt(Math.random()*screenH);
+
+                span.style.left = x + "px";
+                span.style.top = y + "px";
+                
+                
+                span.style.animationDelay = Math.random() + "s";
+
+                var scale = Math.random()+ 0.2; 
+                //注意下面代表css的scale要变成字符串，不然js会把这当成js函数之类的
+                span.style.transform = 'scale('+ scale + ', ' + scale + ')';
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
