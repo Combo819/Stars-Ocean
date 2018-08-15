@@ -5,3 +5,5 @@ https://combo819.github.io/Stars-Ocean/stars-ocean-cd.html
 <br/>
 纯星海：<br/>
 https://combo819.github.io/Stars-Ocean/stars-ocean.html
+带头像的星海:<br/>
+https://combo819.github.io/Stars-Ocean/stars-ocean-head.html
